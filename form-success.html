@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Ковач Дана Страницы формы для мобилки</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__top-menu">
+        <div class="header__wrapper wrapper">
+            <a href="#" class="header__logo">
+                <picture>
+                    <source media="(min-width: 1140px)" srcset="img/logo-desktop.svg">
+                    <img src="img/logo-mobile.svg" alt="DJ STORE инсталляции">
+                </picture>
+            </a>
+            <div class="header__menu-wrapper menu-wrapper menu-wrapper--closed menu-wrapper--nojs">
+                <nav class="header__navigation navigation">
+                    <button class="navigation__button">
+                        <span class="visually-hidden">Открыть меню</span>
+                    </button>
+                    <ul class="navigation__list">
+                        <li>
+                            <a href="#" class="navigation__item navigation__item--main navigation__item--active">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item navigation__item--projects">Проекты</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item navigation__item--services">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item navigation__item--about-company">О компании</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item navigation__item--solutions">Готовые решения</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navigation__item navigation__item--contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__button button button--blue">Заполнить бриф</a>
+                <ul class="header__contacts contacts">
+                    <li>
+                        <h3 class="contacts__title">Напишите нам</h3>
+                    </li>
+                    <li class="contacts__item">
+                        <a href="mailto:info@sld-store.ru" class="contacts__link contacts__link--mail">info@sld-store.ru</a>
+                    </li>
+                    <li class="contacts__item ">
+                        <a href="tel:+78126156279" class="contacts__link contacts__link--phone">
+                            <span  class="blue">Обратный звонок</span>
+                            8 812 615-62-79
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main main__form">
+    <form action="" class="form" method="get">
+        <button class="form__close close">
+            <span class="visually-hidden">Закрыть форму</span>
+        </button>
+        <div class="form__content form__content--success">
+            <h2 class="form__title visually-hidden">Успех!</h2>
+            <p class="form__success-text">Ваша заявка успешно отправлена.<br> Ожидайте звонка в ближайшее время!</p>
+            <button class="form__button form__button--success button button--blue" type="button">Ок</button>
+        </div>
+    </form>
+</main>
+<script src="js/menu.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Ковач Дана</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-menu">
+            <div class="header__wrapper wrapper">
+                <a href="#" class="header__logo">
+                    <picture>
+                        <source media="(min-width: 1140px)" srcset="img/logo-desktop.svg">
+                        <img src="img/logo-mobile.svg" alt="DJ STORE инсталляции">
+                    </picture>
+                </a>
+                <div class="header__menu-wrapper menu-wrapper menu-wrapper--closed menu-wrapper--nojs">
+                    <nav class="header__navigation navigation">
+                        <button class="navigation__button">
+                            <span class="visually-hidden">Открыть меню</span>
+                        </button>
+                        <ul class="navigation__list">
+                            <li>
+                                <a href="#" class="navigation__item navigation__item--main navigation__item--active">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#" class="navigation__item navigation__item--projects">Проекты</a>
+                            </li>
+                            <li>
+                                <a href="#" class="navigation__item navigation__item--services">Услуги</a>
+                            </li>
+                            <li>
+                                <a href="#" class="navigation__item navigation__item--about-company">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#" class="navigation__item navigation__item--solutions">Готовые решения</a>
+                            </li>
+                            <li>
+                                <a href="#" class="navigation__item navigation__item--contacts">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="header__button button button--blue">Заполнить бриф</a>
+                    <ul class="header__contacts contacts">
+                        <li>
+                            <h3 class="contacts__title">Напишите нам</h3>
+                        </li>
+                        <li class="contacts__item">
+                            <a href="mailto:info@sld-store.ru" class="contacts__link contacts__link--mail">info@sld-store.ru</a>
+                        </li>
+                        <li class="contacts__item ">
+                            <a href="tel:+78126156279" class="contacts__link contacts__link--phone">
+                                <span  class="blue">Обратный звонок</span>
+                                8 812 615-62-79
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__slider slider">
+            <div class="slider__slide">
+                <div class="slider__wrapper wrapper">
+                    <div class="slider__left">
+                        <div id="slideContent1" class="slider__content slider__content--active">
+                            <h2 class="slider__title">Оснащение конференц-залов</h2>
+                            <h3 class="slider__subtitle">Видео конференции</h3>
+                            <p class="slider__text">
+                                Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
+                            </p>
+                        </div>
+                        <div id="slideContent2" class="slider__content">
+                            <h2 class="slider__title">Оснащение конференц-залов</h2>
+                            <h3 class="slider__subtitle">Видео конференц2</h3>
+                            <p class="slider__text">
+                                Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
+                            </p>
+                        </div>
+                        <div id="slideContent3" class="slider__content">
+                            <h2 class="slider__title">Оснащение конференц-залов</h2>
+                            <h3 class="slider__subtitle">Видео конференц3</h3>
+                            <p class="slider__text">
+                                Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
+                            </p>
+                        </div>
+                        <div class="slider__buttons">
+                            <a id="callback" href="form.html" class="slider__button button button--transparent">Обратный звонок</a>
+                            <a href="#" class="slider__button button button--blue">Заполнить бриф</a>
+                        </div>
+                    </div>
+                    <div class="slider__right">
+                        <ol class="slider__list">
+                            <li id="slide1" class="slider__list-item slider__list-item--active">
+                                <span class="slider__list--counter">01</span>
+                                <p class="slider__list-text">
+                                    Простота использования оснащения позволяет решать функциональные и организационные задачи, оптимизировать работу, проводить мероприятия различного масштаба.
+                                </p>
+                            </li>
+                            <li id="slide2" class="slider__list-item">
+                                <span class="slider__list--counter">02</span>
+                                <p class="slider__list-text">
+                                    Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.
+                                </p>
+                            </li>
+                            <li id="slide3" class="slider__list-item">
+                                <span class="slider__list--counter">03</span>
+                                <p class="slider__list-text">
+                                    Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.
+                                </p>
+                            </li>
+                        </ol>
+                        <p class="slider__toggles">
+                            <button type="button" class="slider__toggle slider__toggle--left"><span class="visually-hidden">Предыдуший слайд</span></button>
+                            <button type="button" class="slider__toggle slider__toggle--right"><span class="visually-hidden">Следующий слайд</span></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper demo">
+            <div class="demo__column demo__column--left">
+                <picture>
+                    <source media="(min-width: 1140px)" srcset="img/demo-left-desktop.jpg">
+                    <img class="demo__product-image" src="img/demo-left-mobile.jpg" alt="Electro-Voice EVID 4.2">
+                </picture>
+            </div>
+            <div class="demo__column demo__column--right">
+                <div class="demo__items">
+                    <picture>
+                        <source media="(min-width: 1140px)" srcset="img/demo-item-left-desktop.png">
+                        <img src="img/demo-item-left.png" alt="Electro-Voice EVID 4.2" class="demo__item demo__item--left">
+                    </picture>
+                    <picture>
+                        <source media="(min-width: 1140px)" srcset="img/demo-item-right-desktop.png">
+                        <img src="img/demo-item-right.png" alt="Electro-Voice EVID 4.2" class="demo__item demo__item--right">
+                    </picture>
+                    <div class="demo__buttons">
+                        <button class="demo__button demo__button--left demo__button--active">
+                            <span class="visually-hidden">Открыть подробную информацию о товаре</span>
+                        </button>
+                        <span class="demo__button demo__button--right"></span>
+                    </div>
+                    <div class="demo__detail">
+                        <button class="demo__close close">
+                            <span class="visually-hidden">Закрыть подробную информацию</span>
+                        </button>
+                        <h4 class="demo__title demo__title--microphone">Electro-Voice EVID 4.2</h4>
+                        <ul class="demo__list">
+                            <li>
+                                Очень мягкое звучание.
+                            </li>
+                            <li>
+                                Чувствительность 	— 89 дБ.
+                            </li>
+                            <li>
+                                Пиковая мощность 	— 400 Вт.
+                            </li>
+                            <li>
+                                Степень влагозащищенности IP34.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/animation.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/marks.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
