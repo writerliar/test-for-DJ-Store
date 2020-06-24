@@ -6,6 +6,7 @@
     <title>Ковач Дана</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swipe.css">
 </head>
 <body>
     <header class="header">
@@ -65,26 +66,28 @@
             <div class="slider__slide">
                 <div class="slider__wrapper wrapper">
                     <div class="slider__left">
-                        <div id="slideContent1" class="slider__content slider__content--active">
-                            <h2 class="slider__title">Оснащение конференц-залов</h2>
-                            <h3 class="slider__subtitle">Видео конференции</h3>
-                            <p class="slider__text">
-                                Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
-                            </p>
-                        </div>
-                        <div id="slideContent2" class="slider__content">
-                            <h2 class="slider__title">Оснащение конференц-залов</h2>
-                            <h3 class="slider__subtitle">Видео конференц2</h3>
-                            <p class="slider__text">
-                                Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
-                            </p>
-                        </div>
-                        <div id="slideContent3" class="slider__content">
-                            <h2 class="slider__title">Оснащение конференц-залов</h2>
-                            <h3 class="slider__subtitle">Видео конференц3</h3>
-                            <p class="slider__text">
-                                Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
-                            </p>
+                        <div class="slider__left-wrapper">
+                            <div id="slideContent1" class="slider__content slider__content--active">
+                                <h2 class="slider__title">Оснащение конференц-залов</h2>
+                                <h3 class="slider__subtitle">Видео конференции</h3>
+                                <p class="slider__text">
+                                    Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
+                                </p>
+                            </div>
+                            <div id="slideContent2" class="slider__content">
+                                <h2 class="slider__title">Оснащение конференц-залов</h2>
+                                <h3 class="slider__subtitle">Видео конференц2</h3>
+                                <p class="slider__text">
+                                    Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
+                                </p>
+                            </div>
+                            <div id="slideContent3" class="slider__content">
+                                <h2 class="slider__title">Оснащение конференц-залов</h2>
+                                <h3 class="slider__subtitle">Видео конференц3</h3>
+                                <p class="slider__text">
+                                    Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
+                                </p>
+                            </div>
                         </div>
                         <div class="slider__buttons">
                             <a id="callback" href="form.html" class="slider__button button button--transparent">Обратный звонок</a>
@@ -149,8 +152,8 @@
                         <button class="demo__close close">
                             <span class="visually-hidden">Закрыть подробную информацию</span>
                         </button>
-                        <h4 class="demo__title demo__title--microphone">Electro-Voice EVID 4.2</h4>
-                        <ul class="demo__list">
+                        <h4>Electro-Voice EVID 4.2</h4>
+                        <ul>
                             <li>
                                 Очень мягкое звучание.
                             </li>
@@ -169,7 +172,10 @@
             </div>
         </div>
     </main>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/swipe.min.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/backend.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/form.js"></script>
     <script src="js/marks.js"></script>

@@ -63,7 +63,7 @@
     </div>
 </header>
 <main class="main main__form">
-    <form action="" class="form" method="get">
+    <form action="" class="form" method="post">
         <button class="form__close close">
             <span class="visually-hidden">Закрыть форму</span>
         </button>
@@ -80,14 +80,13 @@
             </p>
             <div class="form__checkbox-wrapper">
                 <input type="checkbox" class="visually-hidden form__checkbox" id="personalCheckbox" checked>
-                <label class="form__checkbox-label" for="personalCheckbox"></label>
-                <p class="personal">Я согласен с условиями обработки <a href="#" class="personal__link">персональных данных</a></p>
+                <label class="form__checkbox-label" for="personalCheckbox">
+                    <p class="personal">Я согласен с условиями обработки <a href="#" class="personal__link" target="_blank">персональных данных</a></p>
+                </label>
             </div>
             <button class="form__button form__button--submit button button--blue" type="submit">Отправить</button>
         </div>
     </form>
 </main>
-<script src="js/menu.js"></script>
-<script src="js/form.js"></script>
 </body>
 </html>

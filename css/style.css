@@ -140,6 +140,7 @@ input[type="radio"].visually-hidden {
     height: 49px;
     background: none;
     border: none;
+    outline: none;
 }
 
 .menu-wrapper--closed .navigation__button::before {
@@ -442,6 +443,7 @@ input[type="radio"].visually-hidden {
     border-radius: 50%;
     box-sizing: border-box;
     background-color: rgba(57, 125, 255, 0.15);
+    outline: none;
 }
 
 .demo__button--right {
@@ -541,9 +543,10 @@ input[type="radio"].visually-hidden {
 .demo__close {
     position: absolute;
     right: 15px;
+    outline: none;
 }
 
-.demo__title {
+.demo__detail h4 {
     margin: 0;
     margin-bottom: 11px;
     padding: 0;
@@ -554,20 +557,20 @@ input[type="radio"].visually-hidden {
     color: #2B2D3A;
 }
 
-.demo__title::before {
+.demo__detail h4::before {
     content: url("../img/microphone-mobile.svg");
     position: absolute;
     top: 10px;
     right: 24px;
 }
 
-.demo__list {
+.demo__detail ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.demo__list li {
+.demo__detail ul li {
     position: relative;
     margin-bottom: 9px;
     padding-left: 24px;
@@ -576,15 +579,15 @@ input[type="radio"].visually-hidden {
     color: #2B2D3A;
 }
 
-.demo__list li::before,
-.demo__list li::after {
+.demo__detail ul li::before,
+.demo__detail ul li::after {
     content: "";
     position: absolute;
     background-color: #397DFF;
     border-radius: 50%;
 }
 
-.demo__list li::before {
+.demo__detail ul li::before {
     left: 0;
     top: 1px;
     width: 16px;
@@ -592,7 +595,7 @@ input[type="radio"].visually-hidden {
     opacity: 0.15;
 }
 
-.demo__list li::after {
+.demo__detail ul li::after {
     left: 5px;
     top: 6px;
     width: 6px;
@@ -629,6 +632,7 @@ input[type="radio"].visually-hidden {
     top: 15px;
     width: 15px;
     height: 15px;
+    outline: none;
 }
 
 .form__close::before,
@@ -710,6 +714,11 @@ input[type="radio"].visually-hidden {
 
 .form__checkbox-label {
     position: relative;
+}
+
+.form__checkbox-label::before {
+    content: "";
+    position: absolute;
     display: block;
     width: 16px;
     height: 16px;
@@ -737,6 +746,7 @@ input[type="radio"].visually-hidden {
 .personal {
     margin: 0;
     padding: 0;
+    padding-left: 23px;
     font-weight: 400;
     font-size: 9px;
     line-height: 11px;
@@ -1053,6 +1063,8 @@ input[type="radio"].visually-hidden {
         background-color: #397DFF;
         box-sizing: border-box;
         margin-right: 45px;
+        cursor: pointer;
+        outline: none;
     }
 
     .slider__toggle:last-child {
@@ -1124,14 +1136,14 @@ input[type="radio"].visually-hidden {
         width: 352px;
     }
 
-    .demo__title {
+    .demo__detail h4 {
         margin-bottom: 9px;
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
     }
 
-    .demo__title::before {
+    .demo__detail h4::before {
         content: url("../img/microphone-desktop.svg");
         top: 13px;
         right: 26px;

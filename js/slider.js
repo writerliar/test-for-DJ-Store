@@ -5,6 +5,8 @@ const sliderRightList = slider.querySelector(`.slider__list`);
 const sliderToggleLeft = slider.querySelector(`.slider__toggle--left`);
 const sliderToggleRight = slider.querySelector(`.slider__toggle--right`);
 
+const DESKTOP_WIDTH = 1140;
+
 const RIGHT_SLIDE_ACTIVE_CLASS = `slider__list-item--active`;
 const SLIDE_CONTENT_ACTIVE_CLASS = `slider__content--active`;
 
@@ -48,6 +50,37 @@ const setActiveSlide = () => {
     setActiveBackground(SlidesBackground[sliderActiveItem.id]);
 };
 
+const initSwipeSliderForMobile = () => {
+    const CONTENT_SLIDE_SLICE = `Content`;
+    const SWIPE_SLIDER_CLASS = `swipe`;
+    const SWIPE_WRAP_CLASS = `swipe-wrap`;
+
+    const sliderForMobile = document.querySelector(`.slider__left`);
+    const sliderForMobileContent = document.querySelector(`.slider__left-wrapper`);
+
+    const sliderContents = document.querySelectorAll(`.slider__content`);
+
+    sliderContents.forEach((item) => item.style.display = `block`);
+
+    sliderForMobile.classList.add(SWIPE_SLIDER_CLASS);
+    sliderForMobileContent.classList.add(SWIPE_WRAP_CLASS);
+
+    window.mySwipe = new Swipe(sliderForMobile, {
+        startSlide: 0,
+        draggable: false,
+        autoRestart: false,
+        continuous: true,
+        disableScroll: true,
+        stopPropagation: true,
+        callback: (index, element) => {
+            const idByActiveSlide = element.id;
+            const pureIdByActiveSlide = idByActiveSlide.replace(CONTENT_SLIDE_SLICE, ``);
+
+            setActiveBackground(SlidesBackground[pureIdByActiveSlide]);
+        },
+    });
+};
+
 const moveSlideRight = (evt) => {
     evt.preventDefault();
 
@@ -85,6 +118,10 @@ const moveSlideLeft = (evt) => {
 
     setActiveSlide();
 };
+
+if (window.innerWidth < DESKTOP_WIDTH) {
+    initSwipeSliderForMobile();
+}
 
 sliderToggleRight.addEventListener(`click`, moveSlideRight);
 sliderToggleLeft.addEventListener(`click`, moveSlideLeft);

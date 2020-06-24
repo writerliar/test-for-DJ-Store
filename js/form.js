@@ -1,9 +1,5 @@
 const main = document.querySelector(`.main`);
 const callbackButton = document.querySelector(`#callback`);
-const form = document.querySelector(`.form`);
-
-const DESKTOP_WIDTH = 1140;
-const INDEX_URL = `/instels/`;
 
 const RenderPosition = {
     BEFOREEND: `beforeend`,
@@ -22,10 +18,6 @@ const remove = (element) => {
     element.remove();
 };
 
-const returnOnIndexPage = () => {
-    document.location.replace(INDEX_URL);
-};
-
 const createFormSuccessContentTemplate = () => {
     return `<div class="form__content form__content--success">
             <h2 class="form__title visually-hidden">Успех!</h2>
@@ -35,9 +27,9 @@ const createFormSuccessContentTemplate = () => {
 };
 
 const createFormTemplate = () => {
-    return `<form action="" class="form fade-in" method="get">
+    return `<form action="" class="form" method="post">
         <button class="form__close close">
-            <span class="visually-hidden">Закрыть подробную информацию</span>
+            <span class="visually-hidden">Закрыть форму</span>
         </button>
         <div class="form__content form__content--normal">
             <h2 class="form__title">Готовы обсудить проект?</h2>
@@ -52,10 +44,11 @@ const createFormTemplate = () => {
             </p>
             <div class="form__checkbox-wrapper">
                 <input type="checkbox" class="visually-hidden form__checkbox" id="personalCheckbox" checked>
-                <label class="form__checkbox-label" for="personalCheckbox"></label>
-                <p class="personal">Я согласен с условиями обработки <a href="#" class="personal__link">персональных данных</a></p>
+                <label class="form__checkbox-label" for="personalCheckbox">
+                    <p class="personal">Я согласен с условиями обработки <a href="#" class="personal__link" target="_blank">персональных данных</a></p>
+                </label>
             </div>
-            <button class="form__button button button--blue" type="submit">Отправить</button>
+            <button class="form__button form__button--submit button button--blue" type="submit">Отправить</button>
         </div>
     </form>`;
 };
@@ -70,6 +63,7 @@ const showForm = () => {
     render(main, createFormTemplate(), RenderPosition.AFTEREND);
     setFormCloseButtonClick();
     setSubmitButtonClick();
+    setPhoneMask();
     document.addEventListener(`keydown`, onEscapePress);
     document.addEventListener(`click`, onNoFormClick);
 };
@@ -108,11 +102,7 @@ const onNoFormClick = (evt) => {
 const onFormCloseButtonClick = (evt) => {
     evt.preventDefault();
 
-    if (window.innerWidth >= DESKTOP_WIDTH) {
-        removeForm();
-    } else {
-        returnOnIndexPage();
-    }
+    removeForm();
 };
 
 const setFormSuccessButtonClick = () => {
@@ -130,16 +120,6 @@ const setFormCloseButtonClick = () => {
     formCloseButton.addEventListener(`click`, onFormCloseButtonClick);
 };
 
-const setSubmitButtonClick = () => {
-    const form = document.querySelector(`.form`);
-
-    form.addEventListener(`submit`, (evt) => {
-        evt.preventDefault();
-
-        replaceNormalOnSuccess();
-    });
-};
-
 const replaceNormalOnSuccess = () => {
     const form = document.querySelector(`.form`);
     const formContent = form.querySelector(`.form__content--normal`);
@@ -150,15 +130,30 @@ const replaceNormalOnSuccess = () => {
     setFormSuccessButtonClick();
 };
 
-if (form) {
-    setFormCloseButtonClick();
-    setSubmitButtonClick();
-}
+const setSubmitButtonClick = () => {
+    const form = document.querySelector(`.form`);
 
-if (window.innerWidth >= DESKTOP_WIDTH) {
-    callbackButton.addEventListener(`click`, (evt) => {
+    form.addEventListener(`submit`, (evt) => {
         evt.preventDefault();
 
-        showForm();
+        const data = new FormData(form);
+
+        send(data, replaceNormalOnSuccess, () => {
+            throw new Error(`Can't send this form`);
+        });
     });
-}
+};
+
+const setPhoneMask = () => {
+    const phoneInput = document.querySelector(`#phone`);
+
+    new IMask(phoneInput, {
+        mask: '+{7}(000)000-00-00',
+    });
+};
+
+callbackButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+
+    showForm();
+});
