@@ -427,6 +427,7 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
     width: 100%;
     top: -8px;
+    left: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
