@@ -25,11 +25,11 @@ var SlidesBackground = {
 };
 
 var clearActiveClass = function(items, activeClass) {
-    items.forEach(function(item) {
-        if (item.classList.contains(activeClass)) {
-            item.classList.remove(activeClass);
+    for (var k = 0; k < items.length; k ++) {
+        if (items[k].classList.contains(activeClass)) {
+            items[k].classList.remove(activeClass);
         }
-    });
+    }
 };
 
 var setActiveClassForContent = function(id) {
@@ -62,9 +62,9 @@ var initSwipeSliderForMobile = function() {
 
     var sliderContents = document.querySelectorAll('.slider__content');
 
-    sliderContents.forEach(function(item) {
-        item.style.display = 'block'
-    });
+    for (var i = 0; i < sliderContents.length; i++) {
+        sliderContents[i].style.display = 'block';
+    }
 
     sliderForMobile.classList.add(SWIPE_SLIDER_CLASS);
     sliderForMobileContent.classList.add(SWIPE_WRAP_CLASS);
