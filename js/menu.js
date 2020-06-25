@@ -1,16 +1,18 @@
-const mainNavWrapper = document.querySelector(`.menu-wrapper`);
-const navToggle = document.querySelector(`.navigation__button`);
+"use strict";
 
-mainNavWrapper.classList.remove(`menu-wrapper--nojs`);
+var mainNavWrapper = document.querySelector(".menu-wrapper");
+var navToggle = document.querySelector(".navigation__button");
 
-navToggle.addEventListener(`click`, (evt) => {
+mainNavWrapper.classList.remove("menu-wrapper--nojs");
+
+navToggle.addEventListener("click", (evt) => {
     evt.preventDefault();
 
-    if (mainNavWrapper.classList.contains(`menu-wrapper--closed`)) {
-        mainNavWrapper.classList.remove(`menu-wrapper--closed`);
-        mainNavWrapper.classList.add(`menu-wrapper--opened`);
+    if (mainNavWrapper.classList.contains("menu-wrapper--closed")) {
+        mainNavWrapper.classList.remove("menu-wrapper--closed");
+        mainNavWrapper.classList.add("menu-wrapper--opened");
     } else {
-        mainNavWrapper.classList.add(`menu-wrapper--closed`);
-        mainNavWrapper.classList.remove(`menu-wrapper--opened`);
+        mainNavWrapper.classList.add("menu-wrapper--closed");
+        mainNavWrapper.classList.remove("menu-wrapper--opened");
     }
 });
