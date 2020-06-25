@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function fadeOut(element, ms, hideFunction) {
     var opacity = 1;

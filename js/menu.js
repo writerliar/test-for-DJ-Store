@@ -1,18 +1,18 @@
-"use strict";
+'use strict';
 
-var mainNavWrapper = document.querySelector(".menu-wrapper");
-var navToggle = document.querySelector(".navigation__button");
+var mainNavWrapper = document.querySelector('.menu-wrapper');
+var navToggle = document.querySelector('.navigation__button');
 
-mainNavWrapper.classList.remove("menu-wrapper--nojs");
+mainNavWrapper.classList.remove('menu-wrapper--nojs');
 
-navToggle.addEventListener("click", (evt) => {
+navToggle.addEventListener('click', (evt) => {
     evt.preventDefault();
 
-    if (mainNavWrapper.classList.contains("menu-wrapper--closed")) {
-        mainNavWrapper.classList.remove("menu-wrapper--closed");
-        mainNavWrapper.classList.add("menu-wrapper--opened");
+    if (mainNavWrapper.classList.contains('menu-wrapper--closed')) {
+        mainNavWrapper.classList.remove('menu-wrapper--closed');
+        mainNavWrapper.classList.add('menu-wrapper--opened');
     } else {
-        mainNavWrapper.classList.add("menu-wrapper--closed");
-        mainNavWrapper.classList.remove("menu-wrapper--opened");
+        mainNavWrapper.classList.add('menu-wrapper--closed');
+        mainNavWrapper.classList.remove('menu-wrapper--opened');
     }
 });
