@@ -23,7 +23,7 @@ var remove = function(element) {
 var createFormSuccessContentTemplate = function() {
     return '<div class="form__content form__content--success">' +
             '<h2 class="form__title visually-hidden">Успех!</h2>' +
-            '<p class="form__success-text">Ваша заявка успешно отправлена.<br> Ожидайте звонка в ближайшее время!</p>' +
+            '<p class="form__success-text">Ваша заявка успешно отправлена.<br>Ожидайте звонка в ближайшее время!</p>' +
             '<button class="form__button form__button--success button button--blue" type="button">Ок</button>' +
         '</div>';
 };
