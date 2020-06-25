@@ -5,7 +5,7 @@ var navToggle = document.querySelector('.navigation__button');
 
 mainNavWrapper.classList.remove('menu-wrapper--nojs');
 
-navToggle.addEventListener('click', (evt) => {
+navToggle.addEventListener('click', function(evt) {
     evt.preventDefault();
 
     if (mainNavWrapper.classList.contains('menu-wrapper--closed')) {
