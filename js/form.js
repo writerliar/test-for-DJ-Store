@@ -17,7 +17,9 @@ var remove = function(element) {
         return;
     }
 
-    element.remove();
+    var parent = element.parentElement;
+
+    parent.removeChild(element);
 };
 
 var createFormSuccessContentTemplate = function() {
