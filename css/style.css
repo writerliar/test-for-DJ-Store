@@ -394,8 +394,8 @@ input[type="radio"].visually-hidden {
 }
 
 .demo__items {
-    position: absolute;
-    left: 50%;
+    position: relative;
+    margin: 0 auto;
     margin-top: 10%;
     width: 80%;
     display: -webkit-box;
@@ -406,15 +406,15 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    transform: translateX(-50%);
 }
 
 .demo__item {
     display: block;
+    position: absolute;
 }
 
 .demo__item--right {
-    margin-left: auto;
+    right: 0;
 }
 
 .demo__buttons {
