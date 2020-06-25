@@ -165,7 +165,6 @@ input[type="radio"].visually-hidden {
     padding: 24px 0;
     padding-left: 48px;
     font-weight: 500;
-    /*color: #636671;*/
     color: #2B2D3A;
     font-size: 18px;
     line-height: 23px;
@@ -388,6 +387,9 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/demo-right-desktop.jpg");
     background-repeat: no-repeat;
     background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
